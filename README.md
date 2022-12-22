@@ -4,13 +4,13 @@ Este proyecto nos permite acceder en tiempo real a los datos meteorológicos de 
 
 ## Creación del proyecto y obtención de datos
 
-Este proyecto ha sido generado con [Angular CLI](https://github.com/angular/angular-cli) version 14.2.6.
+Este proyecto ha sido generado con [Angular CLI](https://github.com/angular/angular-cli) versión 14.2.6.
 
 Los datos meteorológicos se han obtenido a través de la API OpenWeatherMap (https://openweathermap.org/current), utilizando para ello una APIkey de mi propiedad.
 
 ## Instalaciones necesarias
 
-Inicialmente, será necesario tener instalado, en primer lugar, Node/npm (https://nodejs.org/es/), y en segundo lugar Angular CLI (https://angular.io/cli) en nuestro ordenador.
+Será necesario tener instalado, en primer lugar, Node/npm (https://nodejs.org/es/). Será necesaria la versión 16.10.0 de node, y la versión 7.24.0 de npm. En segundo lugar, será necesario instalar Angular CLI (https://angular.io/cli) en nuestro ordenador, en su versión 14.2.6.
 
 ## 1. Obtención y acceso al proyecto: GitHub
 
@@ -37,6 +37,12 @@ Introducir el comando `npm run jest` para ejecutar los tests unitarios via [Jest
 ## Tests end-to-end
 
 Introducir el comando `ng e2e` para ejecutar los tests end-to-end a través de su plataforma de elección. Para usar este comando, es necesario añadir primero el paquete que implementa las características de los tests end-to-end.
+
+## Ayuda para la actualización de librerías
+
+Para actualizar node, introducir el comando `nvm install latest`
+
+Para actualizar npm, introducir el comando `npm install -g @angular/cli@latest`
 
 ## Ayuda adicional
 
