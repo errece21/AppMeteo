@@ -91,6 +91,13 @@ body {
     color: var(--white);
 }
 
+a:link,
+a:visited,
+a:active {
+    text-decoration: none;
+    color: var(--white);
+}
+
 .more-info-container {
     flex: 1;
     background-color: var(--shadow-light);
@@ -150,4 +157,16 @@ body {
     color: grey;
     font-size: 0.8em;
     text-align: center;
+}
+
+.btn {
+    background-color: var(--green-2);
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    padding: 1em;
+    color: white;
+    font-size: 0.8em;
+    text-align: center;
+    margin-left: 1em;
 }

@@ -1,24 +1,21 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { environment } from '../../environments/environment';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class WeatherService {
-
-  constructor(private http: HttpClient) { }
-
   //Creamos la llamada a la API:
-  // getWeatherData(cityName: string) {
-  //   this.http.get(environment.weatherApiBaseUrl, {
-  //     headers: new HttpHeaders()
-  //     .set(environment.XRapidAPIHostHeaderName, environment.XRapidAPIHostHeaderValue)
-  //     .set(environment.XRapidAPIKeyHeaderName, environment.XRapidAPIKeyHeaderValue),
-  //     params: new HttpParams()
-  //     .set('q', cityName)
-  //     .set('units', 'metric')
-  //     .set('mode', 'json')
-  //   })
-  // }
+  apiKey = 'e16ad2de54c440bbf4ea1da0c5bd1ee1';
+  URI: string = '';
+
+  constructor(private http: HttpClient) { 
+
+  this.URI = `https://api.openweathermap.org/data/2.5/weather?APPID=${this.apiKey}&units=metric&q=`
+  }
+
+  getWeather(cityName: string) {
+    return this.http.get(`${this.URI}${cityName}`);
+  }
 }
