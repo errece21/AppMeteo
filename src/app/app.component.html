@@ -1,3 +1,4 @@
+<!-- Buscador -->
 <div class="search">
     <form (submit)="submitLocation(cityName)">
         <input type="text" placeholder="Introduce una ciudad..." #cityName>
@@ -5,6 +6,7 @@
     </form>
 </div>
 
+<!-- Nombre y temperatura actual de la ciudad -->
 <div class="container" *ngIf="weather">
     <div class="upper-data">
         <img src="../assets/heat.png" *ngIf="weather.main.temp > 25">
@@ -12,15 +14,20 @@
 
         <div class="weather-data">
             <div class="location">{{weather.name}}</div>
+            <div class="country">{{weather.sys.country}}</div>
             <div class="temperature">{{weather.main.temp}}°C</div>
         </div>
-
     </div>
+
+    <!-- Enlace a OpenWeatherMap -->
     <div class="lower-data">
         <div class="more-info-label">
             <a href="https://openweathermap.org/" target='_blank'>Más información...</a>
         </div>
+
+        <!-- Valores específicos de la ciudad -->
         <div class="more-info-container">
+            <!-- Temperatura mínima -->
             <div class="info-block">
                 <div class="info-block-label">
                     <img src="../assets/frio.png">
@@ -31,6 +38,7 @@
                 </div>
             </div>
 
+            <!-- Temperatura máxima -->
             <div class="info-block">
                 <div class="info-block-label">
                     <img src="../assets/caliente.png">
@@ -41,6 +49,7 @@
                 </div>
             </div>
 
+            <!-- Humedad -->
             <div class="info-block">
                 <div class="info-block-label">
                     <img src="../assets/humedad.png">
@@ -51,6 +60,7 @@
                 </div>
             </div>
 
+            <!-- Viento -->
             <div class="info-block">
                 <div class="info-block-label">
                     <img src="../assets/viento.png">
